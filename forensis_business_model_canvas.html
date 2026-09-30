@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es" style="color-scheme:dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forensis · Business Model Canvas</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b14;--bg2:#0d1322;--card:#111a2e;--line:rgba(148,163,184,.14);--tx:#e6ebf5;--mut:#93a0b8;--ac:#818cf8;--ac2:#a78bfa;--ok:#4ade80;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(88px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Outfit,Inter,sans-serif;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(7,11,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:grid;place-items:center;box-shadow:0 6px 18px rgba(99,102,241,.35)}
+.logo svg{width:20px;height:20px;stroke:#fff}
+.brand b{font:700 1.1rem Outfit;letter-spacing:.06em;display:block;line-height:1.1}
+.brand small{color:var(--mut);font-size:.72rem}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-size:.88rem;color:var(--mut);transition:.2s}nav a:hover{color:#fff}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:600;font-size:.95rem;transition:.25s}
+.btn.p{background:#6366f1;color:#fff;box-shadow:0 8px 24px rgba(99,102,241,.3)}.btn.p:hover{background:#7c83f5}
+.btn.g{border:1px solid rgba(255,255,255,.2)}.btn.g:hover{background:rgba(255,255,255,.06)}
+nav .btn{padding:9px 18px;font-size:.85rem;color:#fff}
+.hero{position:relative;overflow:hidden;padding:110px 0 120px;background:linear-gradient(135deg,#070b14 0%,#0f1233 55%,#1a0f30 100%)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
+.hero::before{width:340px;height:340px;background:rgba(99,102,241,.22);top:-60px;left:-40px}
+.hero::after{width:420px;height:420px;background:rgba(139,92,246,.16);bottom:-120px;right:-60px}
+.hero .wrap{position:relative;z-index:1}
+.tag{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:99px;font-size:.85rem;color:#c3cbe0;margin-bottom:28px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pl 2s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 7px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.hero h1{font-size:clamp(2.5rem,7vw,4.6rem);line-height:1.08;font-weight:700;max-width:820px}
+.grad{background:linear-gradient(90deg,#a5b4fc,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.2rem;color:#aab4cb;max-width:640px;margin:24px 0 38px}
+.hero p strong{color:#fff;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+section{padding:96px 0}
+.head{text-align:center;margin-bottom:56px}
+.eyebrow{color:var(--ac);font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.head h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:10px 0 14px}
+.head p{color:var(--mut);max-width:640px;margin:0 auto;font-size:1.05rem}
+.pillars{background:var(--bg2);border-block:1px solid var(--line)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pil{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;transition:.3s}
+.pil:hover{border-color:var(--c);transform:translateY(-3px)}
+.ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;margin-bottom:20px;background:color-mix(in srgb,var(--c) 16%,transparent)}
+.ico svg{width:24px;height:24px;stroke:var(--c);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pil h3{font-size:1.2rem;margin-bottom:10px}.pil p{margin:0;color:var(--mut);font-size:.95rem}
+/* Canvas */
+.canvas{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:repeat(5,minmax(112px,auto));gap:12px;max-width:1100px;margin:0 auto}
+.blk{position:relative;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:14px;padding:18px;cursor:pointer;transition:.25s;overflow:hidden}
+.blk::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 14%,transparent),transparent 65%);pointer-events:none}
+.blk:hover,.blk:focus-visible{transform:translateY(-3px);border-color:var(--c);box-shadow:0 12px 28px rgba(0,0,0,.45);outline:none}
+.blk .n{font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--c)}
+.blk h3{font-size:.95rem;margin:4px 0 8px;position:relative}
+.blk ul{margin:0;padding:0;list-style:none;position:relative}
+.blk li{font-size:.76rem;color:var(--mut);line-height:1.4;padding-left:12px;position:relative;margin-bottom:4px}
+.blk li::before{content:"";position:absolute;left:0;top:.5em;width:4px;height:4px;border-radius:50%;background:var(--c)}
+.a-partners{grid-column:1/3;grid-row:1/4}.a-activities{grid-column:3/5;grid-row:1/3}.a-resources{grid-column:3/5;grid-row:3/4}
+.a-value{grid-column:5/7;grid-row:1/4}.a-relations{grid-column:7/9;grid-row:1/3}.a-channels{grid-column:7/9;grid-row:3/4}
+.a-segments{grid-column:9/11;grid-row:1/4}.a-costs{grid-column:1/6;grid-row:4/6}.a-revenue{grid-column:6/11;grid-row:4/6}
+.hint{text-align:center;color:var(--mut);font-size:.82rem;margin-top:22px}
+/* Detalle */
+.detail{background:var(--bg2);border-block:1px solid var(--line)}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:.3s}
+.card:hover{border-color:var(--c);box-shadow:0 10px 28px color-mix(in srgb,var(--c) 14%,transparent)}
+.card header{position:static;background:none;border:0;backdrop-filter:none;display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.badge{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--c);background:color-mix(in srgb,var(--c) 18%,transparent);flex:none}
+.card h4{font-size:1.05rem}.card .d{color:var(--mut);font-size:.84rem;margin:0 0 14px}
+.card ul,.mbody ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.card li,.mbody li{display:flex;gap:10px;font-size:.88rem;color:#b3bdd2}
+.card li::before,.mbody li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--c);margin-top:.6em}
+li b{color:#fff;font-weight:600}
+/* Cierre */
+.closing{padding:96px 0}
+.quote{background:linear-gradient(135deg,#131a3d,#1d1340);border:1px solid rgba(129,140,248,.3);border-radius:24px;padding:48px;text-align:center;max-width:980px;margin:0 auto}
+.quote .eyebrow{display:block;margin-bottom:18px}
+.quote p{font:500 clamp(1.1rem,2.2vw,1.45rem)/1.7 Outfit;margin:0;color:#cfd6e8}
+.quote em{font-style:normal;color:#fff;font-weight:600;border-bottom:2px solid var(--ac)}
+footer{border-top:1px solid var(--line);padding:40px 0;background:#050810}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+footer p{margin:0;font-size:.78rem;color:var(--mut)}footer a.up{font-size:.78rem;color:var(--ac)}
+/* Modal */
+#m{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(2,4,10,.72);backdrop-filter:blur(6px)}
+#m.on{display:flex}
+.mbox{position:relative;width:100%;max-width:520px;max-height:88vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:22px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,.6);animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.mbox .x{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.07);color:var(--mut);font-size:1.1rem;cursor:pointer}
+.mbox .x:hover{background:rgba(255,255,255,.14);color:#fff}
+.mtop{display:flex;align-items:center;gap:12px;margin-bottom:10px;padding-right:40px}.mtop h3{font-size:1.45rem}
+.mbox>p{color:var(--mut);font-size:.9rem;margin:0 0 20px}
+.mbody{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:18px}
+.close{margin-top:20px;width:100%;padding:12px;border:0;border-radius:12px;background:#6366f1;color:#fff;font:600 .95rem Inter;cursor:pointer}.close:hover{background:#7c83f5}
+@media(max-width:1024px){
+ nav a:not(.btn){display:none}
+ .canvas{display:flex;flex-direction:column}
+ .g3,.dgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){.g3,.dgrid{grid-template-columns:1fr}section{padding:72px 0}.quote{padding:32px 22px}.hero{padding:80px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="brand" href="#top"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.6-4A12 12 0 0112 2.9 12 12 0 013.4 6 12 12 0 003 9c0 5.6 3.8 10.3 9 11.6 5.2-1.3 9-6 9-11.6 0-1-.1-2-.4-3z"/></svg></div>
+ <div><b>FORENSIS</b><small>Business Model Canvas</small></div></a>
+ <nav><a href="#pilares">Pilares</a><a href="#canvas">Canvas</a><a href="#modelo">Modelo en detalle</a><a class="btn p" href="#canvas">Explorar canvas</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+ <div class="tag"><span class="dot"></span>Ciberseguridad e Informática Forense · Modelo de negocio</div>
+ <h1>Respuesta a incidentes y <span class="grad">peritaje forense digital</span></h1>
+ <p><strong>Forensis</strong> protege a organizaciones vulnerables a ciberataques con <strong>evidencia bajo cadena de custodia estricta</strong>, peritos certificados y respuesta 24/7.</p>
+ <div class="cta"><a class="btn p" href="#canvas">Explorar canvas →</a><a class="btn g" href="#modelo">Ver modelo en detalle</a></div>
+</div></div>
+
+<section id="pilares" class="pillars"><div class="wrap">
+ <div class="head"><span class="eyebrow">Fundamentos</span><h2>Pilares del modelo de negocio</h2><p>Tres ventajas que sostienen la propuesta de Forensis: evidencia defendible, respuesta garantizada e ingresos recurrentes.</p></div>
+ <div class="g3">
+  <div class="pil" style="--c:#818cf8"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.6-4A12 12 0 0112 2.9 12 12 0 013.4 6 12 12 0 003 9c0 5.6 3.8 10.3 9 11.6 5.2-1.3 9-6 9-11.6 0-1-.1-2-.4-3z"/></svg></div><h3>Evidencia defendible</h3><p>Preservación estricta de la cadena de custodia digital, compatible con tribunales, y dictámenes periciales con validez jurídica.</p></div>
+  <div class="pil" style="--c:#a78bfa"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><h3>Respuesta garantizada</h3><p>Equipo multidisciplinario de peritos certificados (CHFI, EnCE, GCFA) y abogados tecnólogos con SLA 24/7/365.</p></div>
+  <div class="pil" style="--c:#34d399"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2m0-8c1.1 0 2.1.4 2.6 1M12 8V7m0 1v8m0 0v1m0-1c-1.1 0-2.1-.4-2.6-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Ingresos recurrentes</h3><p>Contratos de retención (retainers) por guardia permanente, combinados con servicios por evento y consultorías especializadas.</p></div>
+ </div>
+</div></section>
+
+<section id="canvas"><div class="wrap">
+ <div class="head"><span class="eyebrow">Interactivo</span><h2>Los 9 bloques del canvas</h2><p>Haz clic en cada bloque para ver el detalle del modelo de negocio de Forensis.</p></div>
+ <div class="canvas" id="cv"></div>
+ <p class="hint">Vista del Business Model Canvas · Toca un bloque para ampliar</p>
+</div></section>
+
+<section id="modelo" class="detail"><div class="wrap">
+ <div class="head"><span class="eyebrow">Modelo en detalle</span><h2>Los nueve bloques, explicados</h2><p>Explicacion completa de cada bloque, en el orden de construcción del canvas.</p></div>
+ <div class="dgrid" id="dg"></div>
+</div></section>
+
+<div class="closing"><div class="wrap"><div class="quote">
+ <span class="eyebrow">Frase de cierre</span>
+ <p>Nuestro negocio ofrece <em>servicios especializados de respuesta a incidentes y peritaje forense digital</em> a <em>empresas, despachos legales e instituciones vulnerables a ciberataques</em> mediante <em>investigación tecnológica avanzada y análisis con validez legal</em>, y obtiene ingresos a través de <em>contratos de retención (retainers), servicios por evento de crisis y consultorías especializadas</em>.</p>
+</div></div></div>
+</main>
+
+<footer><div class="wrap">
+ <div class="brand"><div class="logo" style="width:32px;height:32px;border-radius:10px;font:700 .9rem Outfit">F</div><b style="font-size:1rem">FORENSIS</b></div>
+ <p>Modelo de negocio · Ciberseguridad e informática forense con validez legal.</p>
+ <a class="up" href="#top">Volver arriba ↑</a>
+</div></footer>
+
+<div id="m" role="dialog" aria-modal="true"><div class="mbox" id="mb"></div></div>
+
+<script>
+const B=[
+{k:"segments",n:1,t:"Segmentos de Clientes",c:"#f87171",s:["Empresas medianas y grandes","Despachos de abogados","Aseguradoras cibernéticas","Sector público"],
+d:"A quién va dirigido el negocio, qué características tiene y qué necesita:",i:[
+"Empresas medianas y grandes: fintechs, e-commerce, bancos, salud y sector corporativo.",
+"Despachos de abogados y firmas legales.",
+"Aseguradoras de riesgo cibernético.",
+"Organismos gubernamentales e instituciones públicas.",
+"Características: manejo de información confidencial o infraestructura crítica, con alta exposición a ciberataques y exigencias de cumplimiento (ISO 27001, GDPR).",
+"Necesidades: respuesta inmediata ante incidentes, determinar el origen y alcance de una brecha sin alterar la evidencia, y dictámenes periciales respaldados por abogados."]},
+{k:"value",n:2,t:"Propuesta de Valor",c:"#818cf8",s:["Cadena de custodia digital compatible con tribunales","Peritos certificados y abogados tecnólogos","SLA de respuesta 24/7"],
+d:"Qué ofrece Forensis y por qué elegirla:",i:[
+"Problema que resuelve: incertidumbre, pérdida financiera y daño reputacional tras un ciberataque, y la incapacidad de demostrar legalmente quién, cómo, cuándo y dónde.",
+"Necesidad que satisface: respaldo jurídica, recuperación de la operatividad y mitigación del impacto de la brecha.",
+"Diferenciador: preservación estricta de la cadena de custodia digital compatible con tribunales.",
+"Diferenciador: peritos certificados (CHFI, EnCE, GCFA) y abogados tecnólogos.",
+"Diferenciador: tiempo de respuesta garantizado bajo SLA 24/7."]},
+{k:"channels",n:3,t:"Canales",c:"#22d3ee",s:["Web con canal de emergencias","Fuerza de ventas B2B","LinkedIn y conferencias","Referidos"],
+d:"Cómo llega el servicio al cliente:",i:[
+"Sitio web institucional con canal de atención a emergencias e incidentes.",
+"Contacto directo corporativo: fuerza de ventas B2B y directores de cuenta.",
+"Redes profesionales y liderazgo de opinión: LinkedIn, artículos técnicos y conferencias de ciberseguridad.",
+"Alianzas y referidos con firmas legales corporativas y brokers de seguros de ciberriesgo."]},
+{k:"relations",n:4,t:"Relación con Clientes",c:"#2dd4bf",s:["Talleres y simulacros","NDAs y atención 24/7/365","Retainers y boletines"],
+d:"Cómo se atraerán, atenderán y conservarán los clientes:",i:[
+"Atracción: talleres ejecutivos de gestión de crisis cibernéticas, simulacros de ataques y casos de estudio desclasificados.",
+"Atención: acompañamiento personalizado, confidencialidad absoluta (NDAs rigurosos) y disponibilidad 24/7/365.",
+"Retención: revisiones periódicas post-incidente, boletines de ciberamenazas y contratos de retención (retainer) con respuesta prioritaria."]},
+{k:"revenue",n:5,t:"Fuentes de Ingresos",c:"#4ade80",s:["Servicios por evento (venta directa)","Retainers: suscripción / membresía","Consultoría especializada"],
+d:"Cómo gana dinero Forensis:",i:[
+"Servicios por evento: honorarios por investigación forense, respuesta a incidentes específicos o peritajes para juicios.",
+"Suscripciones / membresías (retainer): cuota mensual o anual por guardia con tiempos de respuesta garantizados e inspecciones preventivas.",
+"Consultoría especializada: auditorías de análisis forense preventivo (Readiness Assessment) y capacitación a equipos internos de TI."]},
+{k:"resources",n:6,t:"Recursos Clave",c:"#f472b6",s:["Laboratorio forense aislado","Peritos y analistas certificados","EnCase, FTK, Cellebrite, Volatility"],
+d:"Qué necesita Forensis para operar:",i:[
+"Instalaciones: laboratorio forense digital aislado físicamente y protegido electromagnéticamente (jaula de Faraday).",
+"Personal: peritos certificados, analistas de malware, ingenieros de respuesta a incidentes y asesores legales.",
+"Tecnologías: EnCase, FTK, Cellebrite, Volatility, write-blockers y servidores con alto cifrado.",
+"Infraestructura segura: redes privadas aisladas y almacenamiento de custodia digital con alta redundancia."]},
+{k:"activities",n:7,t:"Actividades Clave",c:"#fbbf24",s:["Adquisición forense de evidencia","Análisis de malware","Dictámenes periciales","Defensa ante tribunales"],
+d:"Acciones indispensables para entregar la propuesta de valor:",i:[
+"Investigación forense y obtención de evidencia: imágenes forenses de servidores, discos, redes y móviles sin alterar la integridad de los datos.",
+"Análisis e inteligencia: memoria volátil, ingeniería inversa de malware y reconstrucción de la línea de tiempo del ataque.",
+"Elaboración de dictámenes periciales: informes técnicos y jurídicos con validez legal.",
+"Defensa e impugnación: ratificación y sustentación del dictamen ante tribunales o juntas arbitrales."]},
+{k:"partners",n:8,t:"Socios Clave",c:"#60a5fa",s:["Firmas de abogados","Aseguradoras y brokers","Autoridades de ciberdelincuencia"],
+d:"Aliados que optimizan el modelo y reducen riesgos:",i:[
+"Firmas de abogados y despachos corporativos: referidores de clientes con litigios o delitos informáticos.",
+"Aseguradoras y brokers de ciberriesgo: proveedores preferentes dentro de sus pólizas de respuesta a incidentes.",
+"Desarrolladores de herramientas forenses: licencias de software y hardware de análisis.",
+"Cuerpos policiales y autoridades de ciberdelincuencia: colaboración institucional dentro del margen legal."]},
+{k:"costs",n:9,t:"Estructura de Costos",c:"#a1a1aa",s:["Nómina de peritos y equipo legal","Licencias de software y certificaciones","Laboratorio y equipamiento","Seguros, servicios y almacenamiento","Publicidad B2B","Impuestos"],
+d:"Principales gastos del negocio:",i:[
+"Nómina: salarios y honorarios de peritos, analistas forenses y equipo legal.",
+"Plataformas digitales y software: licencias anuales de software forense y renovación de certificaciones.",
+"Infraestructura y equipamiento: mantenimiento del laboratorio, servidores seguros y write-blockers.",
+"Servicios y certificaciones: auditorías de calidad, seguro de responsabilidad civil profesional y almacenamiento redundante.",
+"Publicidad y comercialización: congresos del sector, marketing B2B e imagen corporativa.",
+"Impuestos: obligaciones fiscales operativas y corporativas."]}
+];
+const li=a=>a.map(x=>{const j=x.indexOf(": ");return j>0&&j<48?`<li><span><b>${x.slice(0,j)}:</b> ${x.slice(j+2)}</span></li>`:`<li><span>${x}</span></li>`}).join("");
+document.getElementById("cv").innerHTML=B.map(b=>`<button class="blk a-${b.k}" style="--c:${b.c}" onclick="op(${b.n-1})"><span class="n">${String(b.n).padStart(2,"0")}</span><h3>${b.t}</h3><ul>${b.s.map(x=>`<li>${x}</li>`).join("")}</ul></button>`).join("");
+document.getElementById("dg").innerHTML=B.map(b=>`<div class="card" style="--c:${b.c}"><header><span class="badge">${b.n}</span><h4>${b.t}</h4></header><p class="d">${b.d}</p><ul>${li(b.i)}</ul></div>`).join("");
+const m=document.getElementById("m"),mb=document.getElementById("mb");
+function op(i){const b=B[i];mb.style.setProperty("--c",b.c);mb.innerHTML=`<button class="x" onclick="cl()" aria-label="Cerrar">✕</button><div class="mtop"><span class="badge">${b.n}</span><h3>${b.t}</h3></div><p>${b.d}</p><div class="mbody"><ul>${li(b.i)}</ul></div><button class="close" onclick="cl()">Cerrar bloque</button>`;m.classList.add("on")}
+function cl(){m.classList.remove("on")}
+m.addEventListener("click",e=>{if(e.target===m)cl()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")cl()});
+</script>
+</body>
+</html>
